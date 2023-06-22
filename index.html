@@ -35,7 +35,7 @@
     </div>
     <!-- ==========Preloader End====================== -->
     <div class="overflow-hidden">
-        <section class="bg-img min-80vh d-flex flex-column">
+        <section class="bg-img min-100vh  d-flex flex-column">
             <!-- ==========header============ -->
             <div class="container">
                 <header>
@@ -71,7 +71,7 @@
             <section class=" d-flex justify-content-center flex-grow-1 position-relative" id="flight">
                 <div class="container_css">
                     <div
-                        class="d-flex align-items-center justify-content-center mt-5  position-relative animate__animated animate__backInDown animate__bounce animate__delay-3s">
+                        class="d-flex align-items-center justify-content-center mt-5 plane-shadow  position-relative animate__animated animate__backInDown animate__bounce animate__delay-3s">
                         <img class="w-100" src="/assets/img/png/aeroplane.png" alt="aeroplane">
                         <h1 class="avitation avitation-abs">Aviation</h1>
                     </div>
@@ -85,11 +85,11 @@
         </section>
     </div>
     <!-- =========Section Second========== -->
-    <section id="schedule">
-        <div class="container_css">
-            <div class="transform">
+    <section class="position-relative" id="schedule">
+        <div class="container_css transform w-100">
                 <div class="d-flex flex-column">
-                    <div class="d-flex btn-box overflow-auto" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="d-flex btn-box overflow-auto" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
                         <button class="btn-1 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
                             id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
                             role="tab" aria-controls="v-pills-home" aria-selected="true">Economy</button>
@@ -102,7 +102,7 @@
                             type="button" role="tab" aria-controls="v-pills-messages"
                             aria-selected="false">First</button>
                     </div>
-                    <div class="row-bg">
+                    <div class="row-bg w-100">
                         <div class="tab-content border-2" id="v-pills-tabContent">
                             <div class="tab-pane fade show active bg-white" id="v-pills-home" role="tabpanel"
                                 aria-labelledby="v-pills-home-tab" tabindex="0">
@@ -264,12 +264,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <h2 class="ff-Montserrat fw-bold text-030522 fs-xl text-center mb-4 pb-3">Our Features</h2>
+        </div>
+        <div class="container_css">
+            <h2 class="ff-Montserrat fw-bold text-030522 fs-xl text-center mb-4 pb-3 mt-20">Our Features</h2>
             <div class="row">
-                <div class="col-xl-3 col-lg-4 col-sm-6 mb-5 mb-xl-0 mt-xl-4 pt-xl-2 d-flex justify-content-center">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        class="feature-box d-flex flex-column align-items-center justify-content-center m-0">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    class="col-xl-3 col-lg-4 col-sm-6 mb-5 mb-xl-0 mt-xl-4 pt-xl-2 d-flex justify-content-center">
+                    <div class="feature-box d-flex flex-column align-items-center justify-content-center m-0">
                         <div class="feature-svg-box mb-3">
                             <img src="/assets/img/svg/passport.svg" alt="passport">
                         </div>
@@ -376,7 +377,10 @@
                     </div>
                 </div>
                 <div class="col-xl-6">
-                    <h4 class="ff-Montserrat fw-xl-bold fs-md text-313ef7">Let’s Fly</h4>
+                    <div class="d-flex align-items-center mb-3">
+                    <h4 class="ff-Montserrat fw-xl-bold fs-md text-313ef7  mb-0">Let’s Fly</h4>
+                    <div class="dashed-border ms-3"></div>
+                    </div>
                     <h2 class="ff-Montserrat fw-bold text-030303 fs-2xlg">It’s one of the leading online flight booking
                         platforms in the world</h2>
                     <ul class="position-relative timeline-dots ps-4">
@@ -419,9 +423,9 @@
                         <div>
                             <div class="ticket-bg position-relative">
                                 <div class="ticket-detail">
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="d-flex  justify-content-sm-between align-items-center mb-4">
                                         <button
-                                            class="ff-Montserrat fw-medium fs-sm text-313ef7 border-0 economy-btn">Economy
+                                            class="ff-Montserrat fw-medium fs-sm text-313ef7 border-0 economy-btn me-3 me-sm-0">Economy
                                             Saver</button>
                                         <h2
                                             class="ff-Montserrat fs-sm fw-semibold text-030303 d-flex align-items-center mb-0">
@@ -446,7 +450,7 @@
                                                 <p class="ff-Montserrat fw-semibold fs-sm text-030303">Economy</p>
                                             </li>
                                         </ul>
-                                        <ul class="ms-5 mb-0">
+                                        <ul class="ms-4 ms-sm-5 mb-0">
                                             <li>
                                                 <h6 class="ff-Montserrat fw-medium fs-xsm text-9ca3af mb-1">Date</h6>
                                                 <p class="ff-Montserrat fw-semibold fs-sm text-030303">20 Nov 2022</p>
@@ -787,10 +791,9 @@
         <div class="container_css">
             <h2 class="ff-Montserrat fw-bold text-011736 fs-xl text-center">Best travelars of this month</h2>
             <div class="row mt-5">
-                <div
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
                     class="col-xl-3 col-lg-4 col-md-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        class="position-relative img-bg m-0">
+                    <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100 user" src="/assets/img/png/raju.png" alt="raju">
                         <img class="img-abs-2" src="/assets/img/svg/raju.svg" alt="raju">
                         <div class="name-abs d-flex flex-column align-bottom">
@@ -799,10 +802,9 @@
                         </div>
                     </div>
                 </div>
-                <div
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="500"
                     class="col-xl-3 col-lg-4 col-md-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        data-aos-delay="500" class="position-relative img-bg m-0">
+                    <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100" src="/assets/img/png/zaire.png" alt="zaire">
                         <img class="img-abs-2" src="/assets/img/svg/zaire.svg" alt="zaire">
                         <div class="name-abs d-flex flex-column align-bottom">
@@ -811,10 +813,10 @@
                         </div>
                     </div>
                 </div>
-                <div
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    data-aos-delay="1000"
                     class="col-xl-3 col-lg-4 col-md-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        data-aos-delay="1000" class="position-relative img-bg m-0">
+                    <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100" src="/assets/img/png/marcus.png" alt="marcus">
                         <img class="img-abs-2" src="/assets/img/svg/marcus.svg" alt="marcus">
                         <div class="name-abs d-flex flex-column align-bottom">
@@ -823,9 +825,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex align-items-center justify-content-center">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        data-aos-delay="1500" class="position-relative img-bg m-0">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    data-aos-delay="1500"
+                    class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex align-items-center justify-content-center">
+                    <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100" src="/assets/img/png/davis.png" alt="davis">
                         <img class="img-abs-2" src="/assets/img/svg/davis.svg" alt="davis">
                         <div class="name-abs d-flex flex-column align-bottom">
@@ -921,28 +924,28 @@
         <div class="container_css pt-lg-5">
             <h2 class="ff-Montserrat fw-bold text-011736 fs-xl text-center mb-4 pb-3">Make memories with us</h2>
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        class=" position-relative outline overflow-hidden memories-img"><img
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
+                    <div class=" position-relative outline overflow-hidden memories-img"><img
                             class="memories-img w-100 zoom" src="/assets/img/png/memories-1.png" alt="memories">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 mb-5 mb-lg-0 memory">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        data-aos-delay="500" class="memory outline memories-img overflow-hidden"><img
-                            class="memories-img w-100 zoom" src="/assets/img/png/memories-2.png" alt="memories">
+                <div data-aos-delay="500" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 mb-5 mb-lg-0 memory">
+                    <div class="memory outline memories-img overflow-hidden"><img class="memories-img w-100 zoom"
+                            src="/assets/img/png/memories-2.png" alt="memories">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
-                    <div data-aos-delay="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000" class="memory outline memories-img overflow-hidden"><img
-                            class="memories-img w-100 zoom" src="/assets/img/png/memories-3.png" alt="memories">
+                <div data-aos-delay="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000" class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
+                    <div class="memory outline memories-img overflow-hidden"><img class="memories-img w-100 zoom"
+                            src="/assets/img/png/memories-3.png" alt="memories">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 memory">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                        data-aos-delay="1500" class="memory outline memories-img overflow-hidden"><img
-                            class="memories-img w-100 zoom" src="/assets/img/png/memories-4.png" alt="memories">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    data-aos-delay="1500" class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 memory">
+                    <div class="memory outline memories-img overflow-hidden"><img class="memories-img w-100 zoom"
+                            src="/assets/img/png/memories-4.png" alt="memories">
                     </div>
                 </div>
             </div>

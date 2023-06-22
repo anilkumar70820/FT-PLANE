@@ -23,7 +23,6 @@
     --fs-2xlg: 32px;
     --fs-xl: 40px;
     --fs-2xl: 48px;
-    --fs-3xl: 117px;
     /* text-color */
     --text-ffffff: #ffffff;
     --text-313ef7: #313ef7;
@@ -80,10 +79,6 @@
     font-size: var(--fs-2xl);
 }
 
-.fs-3xl {
-    font-size: var(--fs-3xl);
-}
-
 .text-ffffff {
     color: var(--text-ffffff);
 }
@@ -137,10 +132,6 @@
 }
 
 /* ==========common classes========== */
-.fw-xl-bold {
-    font-weight: 900;
-}
-
 .ff-Montserrat {
     font-family: 'Montserrat';
 }
@@ -167,6 +158,10 @@
     color: var(--text-a7a7a7);
     font-weight: 400;
     line-height: 150%;
+}
+
+.fw-xl-bold {
+    font-weight: 900;
 }
 
 .container_css {
@@ -216,9 +211,11 @@ nav ul li a:hover::after {
 nav ul li a:hover {
     color: #313EF7 !important;
 }
-.change{
+
+.change {
     transition: all 500ms linear;
 }
+
 .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
 }
@@ -260,8 +257,23 @@ nav ul li a:hover {
     transform: translate(-50%);
 }
 
-.min-80vh {
-    min-height: 80vh;
+/* .plane-shadow {
+    position: relative;
+} */
+
+.plane-shadow::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 76%;
+    width: 1067.64px;
+    height: 65.363px;
+    flex-shrink: 0;
+    background: radial-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.1));
+    mix-blend-mode: difference;
+    border-radius: 120%;
+    opacity: 0.3;
 }
 
 /* =============First Section End========= */
@@ -311,6 +323,11 @@ div::-webkit-scrollbar {
     font-weight: 700 !important;
 }
 
+.dashed-border {
+    border-bottom: 2px dashed Gray/200;
+    width: 460px;
+}
+
 .book-now-btn {
     padding: 14px 45px;
     background-color: #313EF7;
@@ -330,12 +347,15 @@ div::-webkit-scrollbar {
     border-radius: 0 20px 20px 20px;
 }
 
-.mb-20 {
-    margin-bottom: 20%;
+.mt-20 {
+    padding-top: 17%;
 }
 
 .transform {
-    transform: translatey(-50%);
+    position: absolute;
+    top: -14%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .feature-box {
@@ -432,7 +452,7 @@ div::-webkit-scrollbar {
 .timeline-dots::after {
     border-left: 2px dashed #E5E7EB;
     content: '';
-    height: 69%;
+    height: 66%;
     width: 5px;
     position: absolute;
     top: 14px;
@@ -473,7 +493,7 @@ div::-webkit-scrollbar {
     background: #FFFFFF;
     border-radius: 30px;
     padding-bottom: 30px;
-    width: 390px !important;
+    max-width: 400px !important;
 }
 
 .ticket-detail {
@@ -733,8 +753,12 @@ div::-webkit-scrollbar {
     cursor: pointer;
 }
 
-.outline {
-    position: relative;
+.zoom {
+    transition: all 500ms linear;
+}
+
+.memory:hover .zoom {
+    scale: 1.1;
 }
 
 .outline::after {
@@ -756,14 +780,6 @@ div::-webkit-scrollbar {
 /* =========Seventh Section============== */
 .section-bg {
     background-color: rgba(49, 62, 247, 0.05);
-}
-
-.zoom {
-    transition: all 500ms linear;
-}
-
-.memory:hover .zoom {
-    scale: 1.1;
 }
 
 .email-bg {
@@ -921,6 +937,16 @@ hr {
     color: white;
 }
 
+@media (min-width:1200px) {
+    .mb-20 {
+        margin-bottom: 20%;
+    }
+
+    .min-100vh {
+        min-height: 100vh;
+    }
+}
+
 @media (max-width:1200px) {
     .w-xl-100 {
         width: 100%;
@@ -929,6 +955,14 @@ hr {
     .avitation {
         font-weight: 900;
         font-size: 100px;
+    }
+
+    .min-100vh {
+        min-height: 80vh;
+    }
+
+    .mt-20 {
+        padding-top: 10%;
     }
 }
 
@@ -965,8 +999,8 @@ hr {
         left: 0;
     }
 
-    .min-80vh {
-        min-height: 60vh;
+    .min-100vh {
+        min-height: 75vh;
     }
 
     :root {
@@ -981,6 +1015,10 @@ hr {
         font-weight: 800;
         font-size: 90px;
         letter-spacing: 0.4em;
+    }
+
+    .mt-20 {
+        padding-top: 17%;
     }
 }
 
@@ -999,6 +1037,17 @@ hr {
         font-size: 70px;
         letter-spacing: 0.3em;
     }
+
+    .min-100vh {
+        min-height: 70vh;
+    }
+
+    .mt-20 {
+        padding-top: 20%;
+    }
+    .fw-xl-bold {
+        font-weight: 700;
+    }
 }
 
 @media (max-width:576px) {
@@ -1006,7 +1055,7 @@ hr {
         display: none !important;
     }
 
-    .min-80vh {
+    .min-100vh {
         min-height: 70vh;
     }
 
@@ -1025,7 +1074,15 @@ hr {
         position: absolute;
         top: -25%;
     }
+
     .ticket-bg {
         max-width: 390px !important;
+    }
+
+    .mt-20 {
+        padding-top: 40%;
+    }
+    .fw-xl-bold {
+        font-weight: 600;
     }
 }

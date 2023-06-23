@@ -28,12 +28,15 @@
 <body class="overflow-hidden">
     <!-- ==========Preloader========================== -->
     <div id="preloader"
-        class="min-vh-100 d-flex align-items-center justify-content-center bg-warning position-fixed w-100 top-0 z-3 start-0">
+        class="min-vh-100 d-flex align-items-center justify-content-center bg-preloader position-fixed w-100 top-0 z-3 start-0">
         <div class="ff-Montserrat fw-bolder fs-lg text-ffffff"><span class="pe-2"><img src="/assets/img/svg/logo.svg"
                     alt="logo"></span>FT PLANE
         </div>
     </div>
     <!-- ==========Preloader End====================== -->
+    <!-- =======back to top btn========== -->
+    <button onclick="topFunction()" id="back-top" title="Go to top">&#8593;</button>
+    <!-- =================================== -->
     <div class="overflow-hidden">
         <section class="bg-img min-100vh  d-flex flex-column">
             <!-- ==========header============ -->
@@ -76,7 +79,7 @@
                         <h1 class="avitation avitation-abs">Aviation</h1>
                     </div>
                     <h2 class="ff-Montserrat fw-bold text-ffffff fs-2xl text-center">Travel around the world</h2>
-                    <p class="ff-inter fw-normal fs-2xsm text-ffffff text-opacity-75 text-center mb-20">One of the
+                    <p class="ff-inter fw-normal fs-2xsm text-ffffff opacity-75 text-center mb-20">One of the
                         advantages
                         of being disorganized is that one is always having surprising discoveries
                     </p>
@@ -87,186 +90,179 @@
     <!-- =========Section Second========== -->
     <section class="position-relative" id="schedule">
         <div class="container_css transform w-100">
-                <div class="d-flex flex-column">
-                    <div class="d-flex btn-box overflow-auto" id="v-pills-tab" role="tablist"
-                        aria-orientation="vertical">
-                        <button class="btn-1 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
-                            id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
-                            role="tab" aria-controls="v-pills-home" aria-selected="true">Economy</button>
-                        <button class="btn-2 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
-                            id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
-                            type="button" role="tab" aria-controls="v-pills-profile"
-                            aria-selected="false">Busniness</button>
-                        <button class="btn-3 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
-                            id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
-                            type="button" role="tab" aria-controls="v-pills-messages"
-                            aria-selected="false">First</button>
+            <div class="d-flex flex-column">
+                <div class="d-flex btn-box overflow-auto" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="btn-1 border-0  ff-Montserrat fw-semibold fs-xmd text-030522" id="v-pills-home-tab"
+                        data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true">Economy</button>
+                    <button class="btn-2 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
+                        id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button"
+                        role="tab" aria-controls="v-pills-profile" aria-selected="false">Busniness</button>
+                    <div class="left-border"></div>
+                    <button class="btn-3 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
+                        id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button"
+                        role="tab" aria-controls="v-pills-messages" aria-selected="false">First</button>
+                </div>
+                <div class="tab-content border-2 row-bg" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab" tabindex="0">
+                        <div class="row pt-5 pb-4">
+                            <div
+                                class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/location.svg" alt="location">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Location
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Where are you
+                                            going?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/travelrs.svg" alt="travelr">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Travelers
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add guest</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/check-in.svg" alt="clender">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-in
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/check-in.svg" alt="location">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-out
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row-bg w-100">
-                        <div class="tab-content border-2" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active bg-white" id="v-pills-home" role="tabpanel"
-                                aria-labelledby="v-pills-home-tab" tabindex="0">
-                                <div class="row pt-5 pb-4">
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/location.svg" alt="location">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Location
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Where are you
-                                                    going?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/travelrs.svg" alt="travelr">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Travelers
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add guest</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/check-in.svg" alt="clender">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-in
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/check-in.svg" alt="location">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-out
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
-                                            </div>
-                                        </div>
-
+                    <div class="tab-pane fade bg-white" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab" tabindex="0">
+                        <div class="row pt-5 pb-4">
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/location.svg" alt="location">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Location
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Where are you
+                                            going?
+                                        </p>
                                     </div>
                                 </div>
+
                             </div>
-                            <div class="tab-pane fade bg-white" id="v-pills-profile" role="tabpanel"
-                                aria-labelledby="v-pills-profile-tab" tabindex="0">
-                                <div class="row pt-5 pb-4">
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/location.svg" alt="location">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Location
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Where are you
-                                                    going?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/travelrs.svg" alt="travelr">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Travelers
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add guest</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/check-in.svg" alt="clender">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-in
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/check-in.svg" alt="location">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-out
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
-                                            </div>
-                                        </div>
-
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/travelrs.svg" alt="travelr">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Travelers
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add guest</p>
                                     </div>
                                 </div>
+
                             </div>
-                            <div class="tab-pane fade bg-white" id="v-pills-messages" role="tabpanel"
-                                aria-labelledby="v-pills-messages-tab" tabindex="0">
-                                <div class="row pt-5 pb-4">
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/location.svg" alt="location">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Location
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Where are you
-                                                    going?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/travelrs.svg" alt="travelr">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Travelers
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add guest</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/check-in.svg" alt="clender">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-in
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                                        <div class="d-flex align-items-center">
-                                            <img src="/assets/img/svg/check-in.svg" alt="location">
-                                            <div class="ms-2">
-                                                <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-out
-                                                </h2>
-                                                <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
-                                            </div>
-                                        </div>
-
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/check-in.svg" alt="clender">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-in
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
                                     </div>
                                 </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/check-in.svg" alt="location">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-out
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center pb-5">
-                            <button class="border-0 book-now-btn ff-Montserrat fw-semibold fs-sm text-ffffff">Book
-                                Now</button>
+                    </div>
+                    <div class="tab-pane fade bg-white" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab" tabindex="0">
+                        <div class="row pt-5 pb-4">
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/location.svg" alt="location">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Location
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Where are you
+                                            going?
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/travelrs.svg" alt="travelr">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Travelers
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add guest</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 mb-lg-0 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/check-in.svg" alt="clender">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-in
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="/assets/img/svg/check-in.svg" alt="location">
+                                    <div class="ms-2">
+                                        <h2 class="ff-Montserrat fw-semibold fs-xmd text-030522 mb-0">Check-out
+                                        </h2>
+                                        <p class="ff-Montserrat fw-normal fs-sm text-aeb5bf mb-0">Add date</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+                    </div>
+                    <div class="d-flex justify-content-center pb-5">
+                        <button class="border-0 book-now-btn ff-Montserrat fw-semibold fs-sm text-ffffff">Book
+                            Now</button>
                     </div>
                 </div>
+            </div>
         </div>
-        <div class="container_css">
-            <h2 class="ff-Montserrat fw-bold text-030522 fs-xl text-center mb-4 pb-3 mt-20">Our Features</h2>
+        <div class="container_css pt-20">
+            <h2 class="ff-Montserrat fw-bold text-030522 fs-xl text-center mb-4 pb-3 pt-5">Our Features</h2>
             <div class="row">
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
                     class="col-xl-3 col-lg-4 col-sm-6 mb-5 mb-xl-0 mt-xl-4 pt-xl-2 d-flex justify-content-center">
@@ -294,7 +290,7 @@
                         <div class="feature-svg-box mb-3">
                             <img src="/assets/img/svg/discount.svg" alt="discount">
                         </div>
-                        <h2 class="ff-Montserrat fw-bolder text-030522 fs-xlg text-center mb-2">Online Support</h2>
+                        <h2 class="ff-Montserrat fw-bolder text-030522 fs-xlg text-center mb-2">More Discount</h2>
                         <p class="ff-Montserrat fw-normal fs-sm text-center text-rgba mb-4 pb-2">Suspendisse ultrices
                             nibh non
                             cursus sagittis. Morbi dictum consequat ex, quis finibus magna.
@@ -378,8 +374,8 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="d-flex align-items-center mb-3">
-                    <h4 class="ff-Montserrat fw-xl-bold fs-md text-313ef7  mb-0">Let’s Fly</h4>
-                    <div class="dashed-border ms-3"></div>
+                        <h4 class="ff-Montserrat fw-xl-bold fs-md text-313ef7  mb-0">Let’s Fly</h4>
+                        <div class="dashed-border ms-3"></div>
                     </div>
                     <h2 class="ff-Montserrat fw-bold text-030303 fs-2xlg">It’s one of the leading online flight booking
                         platforms in the world</h2>
@@ -768,7 +764,6 @@
                                 <span class="black-circle black-c-position-2"></span>
                             </div>
                         </div>
-
                     </div>
                     <img class="line-abs d-none d-sm-block" src="/assets/img/png/timeline.png" alt="dashed-line">
                     <span class="slick-arrow slick-arrow-up-abs front"><svg width="11" height="18" viewBox="0 0 11 18"
@@ -850,25 +845,25 @@
                 <div class="col-lg-7 ">
                     <div class="position-relative">
                         <img class="w-100" src="/assets/img/png/map.png" alt="map">
-                        <div class="cus-1-position">
+                        <div class="cus-1-position animate__animated animate__infinite animate__pulse">
                             <img src="/assets/img/svg/customer-1.svg" alt="customer">
                         </div>
-                        <div class="cus-2-position">
+                        <div class="cus-2-position animate__animated animate__infinite animate__pulse">
                             <img src="/assets/img/svg/customer-2.svg" alt="customer">
                         </div>
-                        <div class="cus-3-position">
+                        <div class="cus-3-position animate__animated animate__infinite animate__pulse">
                             <img src="/assets/img/svg/customer-3.svg" alt="customer">
                         </div>
-                        <div class="cus-4-position">
+                        <div class="cus-4-position animate__animated animate__infinite animate__pulse">
                             <img src="/assets/img/svg/customer-4.svg" alt="customer">
                         </div>
-                        <div class="cus-5-position">
+                        <div class="cus-5-position animate__animated animate__infinite animate__heartBeat">
                             <img src="/assets/img/svg/customer-5.svg" alt="customer">
                         </div>
-                        <div class="cus-6-position">
+                        <div class="cus-6-position animate__animated animate__infinite animate__heartBeat">
                             <img src="/assets/img/svg/customer-6.svg" alt="customer">
                         </div>
-                        <div class="cus-7-position">
+                        <div class="cus-7-position animate__animated animate__infinite animate__heartBeat">
                             <img src="/assets/img/svg/customer-7.svg" alt="customer">
                         </div>
                     </div>
@@ -932,20 +927,20 @@
                 </div>
                 <div data-aos-delay="500" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
                     class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 mb-5 mb-lg-0 memory">
-                    <div class="memory outline memories-img overflow-hidden"><img class="memories-img w-100 zoom"
-                            src="/assets/img/png/memories-2.png" alt="memories">
+                    <div class="position-relative memory outline memories-img overflow-hidden"><img
+                            class="memories-img w-100 zoom" src="/assets/img/png/memories-2.png" alt="memories">
                     </div>
                 </div>
                 <div data-aos-delay="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000" class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
-                    <div class="memory outline memories-img overflow-hidden"><img class="memories-img w-100 zoom"
-                            src="/assets/img/png/memories-3.png" alt="memories">
+                    <div class="position-relative memory outline memories-img overflow-hidden"><img
+                            class="memories-img w-100 zoom" src="/assets/img/png/memories-3.png" alt="memories">
                     </div>
                 </div>
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
                     data-aos-delay="1500" class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 memory">
-                    <div class="memory outline memories-img overflow-hidden"><img class="memories-img w-100 zoom"
-                            src="/assets/img/png/memories-4.png" alt="memories">
+                    <div class="position-relative memory outline memories-img overflow-hidden"><img
+                            class="memories-img w-100 zoom" src="/assets/img/png/memories-4.png" alt="memories">
                     </div>
                 </div>
             </div>
@@ -1034,7 +1029,6 @@
         </div>
     </footer>
     <!-- ==========Footer End========================= -->
-    <a class="back-top" href="#">&#8593;</a>
     <!-- =====jquery link==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
@@ -1056,7 +1050,7 @@
         const b = document.getElementById("change")
         function navresponsive() {
             a.classList.toggle("show")
-            document.body.classList.toggle("overflow-hidden")
+            document.body.classList.toggle("overflow_hidden")
             b.classList.toggle("change")
         }
         const preloader = document.getElementById("preloader")
@@ -1099,6 +1093,21 @@
         AOS.init({
             once: true,
         });
+    </script>
+    <script>
+        let mybutton = document.getElementById("back-top");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 </body>
 

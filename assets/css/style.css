@@ -144,6 +144,10 @@
     font-family: 'Rubik';
 }
 
+.bg-preloader {
+    background-color: rgba(1, 2, 35, 1);
+}
+
 /* ======component classes==== */
 .nav-style {
     font-size: var(--fs-sm);
@@ -257,10 +261,6 @@ nav ul li a:hover {
     transform: translate(-50%);
 }
 
-/* .plane-shadow {
-    position: relative;
-} */
-
 .plane-shadow::after {
     content: '';
     position: absolute;
@@ -299,7 +299,17 @@ div::-webkit-scrollbar {
     padding: 16px 39.17px;
 }
 
+.btn-3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 32px;
+    background-color: rgba(229, 231, 235, 1);
+}
+
 .btn-3 {
+    position: relative;
     background-color: white;
     padding: 16px 66px;
     border-top-right-radius: 20px;
@@ -323,9 +333,13 @@ div::-webkit-scrollbar {
     font-weight: 700 !important;
 }
 
+.btn-3:hover:after {
+    display: none;
+}
+
 .dashed-border {
-    border-bottom: 2px dashed Gray/200;
-    width: 460px;
+    border-bottom: 2px dashed rgba(229, 231, 235, 1);
+    width: 75%;
 }
 
 .book-now-btn {
@@ -347,17 +361,6 @@ div::-webkit-scrollbar {
     border-radius: 0 20px 20px 20px;
 }
 
-.mt-20 {
-    padding-top: 17%;
-}
-
-.transform {
-    position: absolute;
-    top: -14%;
-    left: 50%;
-    transform: translate(-50%);
-}
-
 .feature-box {
     width: 281.63px;
     height: 380px;
@@ -370,6 +373,10 @@ div::-webkit-scrollbar {
 
 .feature-box:hover {
     scale: 1.1;
+}
+
+.feature-box:hover .arrow-bg {
+    background-color: #313EF7;
 }
 
 .feature-svg-box {
@@ -390,11 +397,7 @@ div::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 500ms linear;
-}
-
-.arrow-bg:hover {
-    background-color: #313EF7;
+    transition: all 400ms linear;
 }
 
 .abs-girl {
@@ -467,7 +470,7 @@ div::-webkit-scrollbar {
     border-radius: 50%;
     background-color: #313EF7;
     position: absolute;
-    top: 7px;
+    top: 9px;
     left: -20px;
 }
 
@@ -914,36 +917,45 @@ hr {
 }
 
 /* ==============Footer end============== */
-.back-top {
-    --offset: 50px;
-    position: sticky;
+#back-top {
+    display: none;
+    position: fixed;
+    right: 20px;
     bottom: 20px;
-    left: 100%;
-    place-self: end;
-    margin-top: calc(100vh + var(--offset));
-    /* button style */
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'poppins';
-    font-weight: 500;
+    font-weight: 800;
     color: #313EF7;
     border: 2px solid #313EF7;
     padding: 5px 20px;
     border-radius: 100%;
     transition: all 500ms linear;
+    z-index: 1;
 }
 
-.back-top:hover {
+#back-top:hover {
     background-color: #313EF7;
     color: white;
 }
 
-@media (min-width:1200px) {
+@media (min-width:992px) {
     .mb-20 {
-        margin-bottom: 20%;
+        margin-bottom: 25%;
     }
 
     .min-100vh {
         min-height: 100vh;
+    }
+
+    .transform {
+        position: absolute;
+        top: -11%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .pt-20 {
+        padding-top: 15%;
     }
 }
 
@@ -955,14 +967,6 @@ hr {
     .avitation {
         font-weight: 900;
         font-size: 100px;
-    }
-
-    .min-100vh {
-        min-height: 80vh;
-    }
-
-    .mt-20 {
-        padding-top: 10%;
     }
 }
 
@@ -999,10 +1003,6 @@ hr {
         left: 0;
     }
 
-    .min-100vh {
-        min-height: 75vh;
-    }
-
     :root {
         /* font-size */
         --fs-xlg: 24px;
@@ -1017,8 +1017,8 @@ hr {
         letter-spacing: 0.4em;
     }
 
-    .mt-20 {
-        padding-top: 17%;
+    .overflow_hidden {
+        overflow: hidden;
     }
 }
 
@@ -1038,13 +1038,6 @@ hr {
         letter-spacing: 0.3em;
     }
 
-    .min-100vh {
-        min-height: 70vh;
-    }
-
-    .mt-20 {
-        padding-top: 20%;
-    }
     .fw-xl-bold {
         font-weight: 700;
     }
@@ -1055,12 +1048,8 @@ hr {
         display: none !important;
     }
 
-    .min-100vh {
-        min-height: 70vh;
-    }
 
     :root {
-        /* font-size */
         --fs-2xl: 30px;
     }
 
@@ -1079,10 +1068,7 @@ hr {
         max-width: 390px !important;
     }
 
-    .mt-20 {
-        padding-top: 40%;
-    }
     .fw-xl-bold {
-        font-weight: 600;
+        font-weight: 700;
     }
 }

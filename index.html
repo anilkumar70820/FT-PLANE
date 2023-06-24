@@ -28,10 +28,11 @@
 <body class="overflow-hidden">
     <!-- ==========Preloader========================== -->
     <div id="preloader"
-        class="min-vh-100 d-flex align-items-center justify-content-center bg-preloader position-fixed w-100 top-0 z-3 start-0">
-        <div class="ff-Montserrat fw-bolder fs-lg text-ffffff"><span class="pe-2"><img src="/assets/img/svg/logo.svg"
+        class="min-vh-100 d-flex align-items-center justify-content-center bg-preloader position-fixed w-100 top-0 z-3 start-0 position-relative">
+        <div class="ff-Montserrat fw-bolder fs-lg text-ffffff animate__animated animate__pulse animate__repeat-3"><span class="pe-2"><img src="/assets/img/svg/logo.svg"
                     alt="logo"></span>FT PLANE
         </div>
+        <img class="position-absolute plane" src="/assets/img/svg/plane.svg" alt="plane">
     </div>
     <!-- ==========Preloader End====================== -->
     <!-- =======back to top btn========== -->
@@ -58,7 +59,7 @@
                             <li><a onclick="navresponsive()" class="nav-style" href="#orders">Your
                                     Orders</a>
                             </li>
-                            <li><button onclick="navresponsive()" class="nav-style let-fly-btn" href="#">Let’s
+                            <li><button onclick="navresponsive()" class="nav-style let-fly-btn">Let’s
                                     Fly</button>
                             </li>
                         </ul>
@@ -74,11 +75,11 @@
             <section class=" d-flex justify-content-center flex-grow-1 position-relative" id="flight">
                 <div class="container_css">
                     <div
-                        class="d-flex align-items-center justify-content-center mt-5 plane-shadow  position-relative animate__animated animate__backInDown animate__bounce animate__delay-3s">
-                        <img class="w-100" src="/assets/img/png/aeroplane.png" alt="aeroplane">
+                        class="d-flex align-items-center justify-content-center mt-5 plane-shadow  position-relative">
+                        <img class="w-100 animate__animated animate__backInDown animate__bounce animate__delay-3s" src="/assets/img/png/aeroplane.png" alt="aeroplane">
                         <h1 class="avitation avitation-abs">Aviation</h1>
                     </div>
-                    <h2 class="ff-Montserrat fw-bold text-ffffff fs-2xl text-center">Travel around the world</h2>
+                    <h2 class="ff-Montserrat fw-bold text-ffffff fs-2xl text-center mt-3">Travel around the world</h2>
                     <p class="ff-inter fw-normal fs-2xsm text-ffffff opacity-75 text-center mb-20">One of the
                         advantages
                         of being disorganized is that one is always having surprising discoveries
@@ -92,14 +93,14 @@
         <div class="container_css transform w-100">
             <div class="d-flex flex-column">
                 <div class="d-flex btn-box overflow-auto" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="btn-1 border-0  ff-Montserrat fw-semibold fs-xmd text-030522" id="v-pills-home-tab"
+                    <button class="btn-1 border-0  ff-Montserrat fw-semibold fs-xmd text-030522 active nav-link" id="v-pills-home-tab"
                         data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
                         aria-controls="v-pills-home" aria-selected="true">Economy</button>
-                    <button class="btn-2 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
+                    <button class="btn-2 border-0  ff-Montserrat fw-semibold fs-xmd text-030522 nav-link"
                         id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button"
                         role="tab" aria-controls="v-pills-profile" aria-selected="false">Busniness</button>
                     <div class="left-border"></div>
-                    <button class="btn-3 border-0  ff-Montserrat fw-semibold fs-xmd text-030522"
+                    <button class="btn-3 border-0  ff-Montserrat fw-semibold fs-xmd text-030522 nav-link"
                         id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button"
                         role="tab" aria-controls="v-pills-messages" aria-selected="false">First</button>
                 </div>
@@ -349,7 +350,7 @@
             <div class="row py-5 my-5">
                 <div class="col-xl-6 d-flex justify-content-center mb-5 mb-lg-0">
                     <div class="position-relative timeline">
-                        <img src="/assets/img/png/man-in boat.png" alt="man-in-boat">
+                        <img src="/assets/img/png/man-in-boat.png" alt="man-in-boat">
                         <div class="abs-girl d-none d-sm-block">
                             <img src="/assets/img/png/girl-phone-camera.png" alt="girl">
                         </div>
@@ -357,7 +358,7 @@
                                 alt="passports">
                         </div>
                         <img class="d-none d-sm-block abs-ticket animate__animated animate__wobble animate__infinite"
-                            src="/assets/img/svg/Airplane Ticket.svg" alt="Airplane-ticket">
+                            src="/assets/img/svg/Airplane-Ticket.svg" alt="Airplane-ticket">
                         <div
                             class="d-none d-sm-block abs-newyork d-sm-flex align-items-center animate__animated animate__pulse animate__infinite">
                             <img class="me-2" src="/assets/img/svg/location-icon.svg" alt="location-icon">
@@ -367,7 +368,7 @@
                             src="/assets/img/svg/Clouds.svg" alt="Clouds">
                         <div
                             class="d-none d-sm-block d-sm-flex align-items-center abs-star animate__animated animate__pulse animate__infinite">
-                            <img src="/assets/img/svg/star.svg" alt="star">
+                            <div class="star-bg"><img src="/assets/img/svg/star.svg" alt="star"></div>
                             <p class="mb-0 ff-Montserrat fw-semibold fs-sm text-000000 ms-2">5.0</p>
                         </div>
                     </div>
@@ -412,7 +413,7 @@
                     <p class="ff-Montserrat fw-normal fs-sm text-a7a7a7">Lorem Ipsum is simply dummy text of the
                         printing and <span class="d-lg-block"> typesetting industry. Lorem Ipsum has been
                             the industry's</span></p>
-                    <img class="mt-4 earth" src="/assets/img/png/Air Delivery.png" alt="air-delivery">
+                    <img class="mt-4 earth" src="/assets/img/png/Air-Delivery.png" alt="air-delivery">
                 </div>
                 <div class="col-lg-6 position-relative">
                     <div class="ticketslider">
@@ -787,7 +788,7 @@
             <h2 class="ff-Montserrat fw-bold text-011736 fs-xl text-center">Best travelars of this month</h2>
             <div class="row mt-5">
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                    class="col-xl-3 col-lg-4 col-md-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
+                    class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
                     <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100 user" src="/assets/img/png/raju.png" alt="raju">
                         <img class="img-abs-2" src="/assets/img/svg/raju.svg" alt="raju">
@@ -798,7 +799,7 @@
                     </div>
                 </div>
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="500"
-                    class="col-xl-3 col-lg-4 col-md-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
+                    class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
                     <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100" src="/assets/img/png/zaire.png" alt="zaire">
                         <img class="img-abs-2" src="/assets/img/svg/zaire.svg" alt="zaire">
@@ -810,7 +811,7 @@
                 </div>
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
                     data-aos-delay="1000"
-                    class="col-xl-3 col-lg-4 col-md-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
+                    class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-5 mb-xl-0 d-flex align-items-center justify-content-center">
                     <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100" src="/assets/img/png/marcus.png" alt="marcus">
                         <img class="img-abs-2" src="/assets/img/svg/marcus.svg" alt="marcus">
@@ -822,7 +823,7 @@
                 </div>
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
                     data-aos-delay="1500"
-                    class="col-xl-3 col-lg-4 col-md-6 col-12 d-flex align-items-center justify-content-center">
+                    class="col-xl-3 col-lg-4 col-sm-6 col-12 d-flex align-items-center justify-content-center">
                     <div class="position-relative img-bg m-0">
                         <img class="img-abs-1 w-100" src="/assets/img/png/davis.png" alt="davis">
                         <img class="img-abs-2" src="/assets/img/svg/davis.svg" alt="davis">
@@ -842,7 +843,7 @@
             <h3 class="ff-Montserrat fw-semibold text-313ef7 fs-md text-center mb-2">What’s our customer saying</h3>
             <h2 class="ff-Montserrat fw-bold text-011736 fs-xl text-center">Our Customer Feedback</h2>
             <div class="row mt-5 pt-3">
-                <div class="col-lg-7 ">
+                <div class="col-lg-7 mb-5 mb-lg-0">
                     <div class="position-relative">
                         <img class="w-100" src="/assets/img/png/map.png" alt="map">
                         <div class="cus-1-position animate__animated animate__infinite animate__pulse">
@@ -920,25 +921,25 @@
             <h2 class="ff-Montserrat fw-bold text-011736 fs-xl text-center mb-4 pb-3">Make memories with us</h2>
             <div class="row">
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                    class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
+                    class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center mb-5 mb-lg-0 memory">
                     <div class=" position-relative outline overflow-hidden memories-img"><img
                             class="memories-img w-100 zoom" src="/assets/img/png/memories-1.png" alt="memories">
                     </div>
                 </div>
                 <div data-aos-delay="500" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                    class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 mb-5 mb-lg-0 memory">
+                    class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center mt-lg-5 mb-5 mb-lg-0 memory">
                     <div class="position-relative memory outline memories-img overflow-hidden"><img
                             class="memories-img w-100 zoom" src="/assets/img/png/memories-2.png" alt="memories">
                     </div>
                 </div>
                 <div data-aos-delay="1000" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000" class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-lg-0 memory">
+                    data-aos-duration="2000" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center mb-5 mb-lg-0 memory">
                     <div class="position-relative memory outline memories-img overflow-hidden"><img
                             class="memories-img w-100 zoom" src="/assets/img/png/memories-3.png" alt="memories">
                     </div>
                 </div>
                 <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                    data-aos-delay="1500" class="col-lg-3 col-md-4 col-sm-6 mt-lg-5 memory">
+                    data-aos-delay="1500" class="col-xl-3 col-lg-4 col-sm-6 d-flex justify-content-center mt-lg-5 memory">
                     <div class="position-relative memory outline memories-img overflow-hidden"><img
                             class="memories-img w-100 zoom" src="/assets/img/png/memories-4.png" alt="memories">
                     </div>

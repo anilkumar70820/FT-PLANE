@@ -148,6 +148,10 @@
     background-color: rgba(1, 2, 35, 1);
 }
 
+.fw-xl-bold {
+    font-weight: 900;
+}
+
 /* ======component classes==== */
 .nav-style {
     font-size: var(--fs-sm);
@@ -164,8 +168,22 @@
     line-height: 150%;
 }
 
-.fw-xl-bold {
-    font-weight: 900;
+.plane {
+    bottom: 0;
+    left: 0;
+    animation-name: plane;
+    animation-duration: 3000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes plane {
+    0% {
+        left: 500px;
+        bottom: 500px;
+        transform: rotatey(-50deg);
+    }
 }
 
 .container_css {
@@ -199,17 +217,19 @@ nav ul li a {
 nav ul li a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 2px;
     background-color: #313EF7;
     left: 0;
     bottom: -13px;
     display: inline-block;
     transition: all 500ms linear;
+    transform: scaleX(0);
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    /* width: 100%; */
+    transform: scaleX(1);
 }
 
 nav ul li a:hover {
@@ -289,14 +309,14 @@ div::-webkit-scrollbar {
 }
 
 .btn-1 {
-    background-color: white;
-    padding: 16px 42.17px;
-    border-top-left-radius: 20px;
+    background-color: white !important;
+    padding: 16px 42.17px !important;
+    border-top-left-radius: 20px !important;
 }
 
 .btn-2 {
-    background-color: white;
-    padding: 16px 39.17px;
+    background-color: white !important;
+    padding: 16px 39.17px !important;
 }
 
 .btn-3::after {
@@ -308,28 +328,34 @@ div::-webkit-scrollbar {
     background-color: rgba(229, 231, 235, 1);
 }
 
+.nav-link.active {
+    color: white !important;
+    background-color: #313EF7 !important;
+    font-weight: 700 !important;
+}
+
 .btn-3 {
     position: relative;
-    background-color: white;
-    padding: 16px 66px;
-    border-top-right-radius: 20px;
+    background-color: white !important;
+    padding: 16px 66px !important;
+    border-top-right-radius: 20px !important;
 }
 
 .btn-1:hover {
-    background-color: #313EF7;
-    color: white;
+    background-color: #313EF7 !important;
+    color: white !important;
     font-weight: 700 !important;
 }
 
 .btn-2:hover {
-    background-color: #313EF7;
-    color: white;
+    background-color: #313EF7 !important;
+    color: white !important;
     font-weight: 700 !important;
 }
 
 .btn-3:hover {
-    background-color: #313EF7;
-    color: white;
+    background-color: #313EF7 !important;
+    color: white !important;
     font-weight: 700 !important;
 }
 
@@ -473,7 +499,15 @@ div::-webkit-scrollbar {
     top: 9px;
     left: -20px;
 }
-
+.star-bg{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 153, 0, 1);
+}
 /* ===========Second Section End============ */
 /* ========Third section============ */
 .bg-010223 {
@@ -754,6 +788,8 @@ div::-webkit-scrollbar {
 .memories-img {
     border-radius: 200px;
     cursor: pointer;
+    width: 262px;
+    height: 390px;
 }
 
 .zoom {
@@ -850,12 +886,13 @@ input[type="email"] {
 footer ul li a::after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 2px;
     background-color: #313EF7;
     left: 0;
     bottom: -5px;
     display: inline-block;
+    transform: scaleX(0);
     transition: all 400ms linear;
 }
 
@@ -869,7 +906,7 @@ footer ul li a:hover {
 }
 
 footer ul li a:hover::after {
-    width: 100%;
+   transform: scaleX(1);
 }
 
 .facebook {
@@ -926,6 +963,7 @@ hr {
     font-family: 'poppins';
     font-weight: 800;
     color: #313EF7;
+    background-color: transparent;
     border: 2px solid #313EF7;
     padding: 5px 20px;
     border-radius: 100%;
@@ -940,11 +978,7 @@ hr {
 
 @media (min-width:992px) {
     .mb-20 {
-        margin-bottom: 25%;
-    }
-
-    .min-100vh {
-        min-height: 100vh;
+        margin-bottom: 18%;
     }
 
     .transform {
@@ -952,6 +986,10 @@ hr {
         top: -11%;
         left: 50%;
         transform: translate(-50%);
+    }
+
+    .min-100vh {
+        min-height: 100vh;
     }
 
     .pt-20 {
@@ -995,7 +1033,7 @@ hr {
     label[for="menuicon"]>span {
         width: 100%;
         height: 4px;
-        background-color: palevioletred;
+        background-color: #313EF7;
 
     }
 
